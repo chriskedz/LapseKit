@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B0553DD178CD6F300A2B6FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0553DC178CD6F300A2B6FB /* Foundation.framework */; };
 		3B0553E2178CD6F300A2B6FB /* LapseKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0553E1178CD6F300A2B6FB /* LapseKit.h */; };
-		3B0553E4178CD6F300A2B6FB /* LapseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0553E3178CD6F300A2B6FB /* LapseKit.m */; };
+		3B0553EE178CD82B00A2B6FB /* EVLHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0553ED178CD82B00A2B6FB /* EVLHTTPClient.m */; };
 		4C16D4702B914CDC99D57B66 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2171E49F4BEB4D3B8589F845 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,8 @@
 		3B0553DC178CD6F300A2B6FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B0553E0178CD6F300A2B6FB /* LapseKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LapseKit-Prefix.pch"; sourceTree = "<group>"; };
 		3B0553E1178CD6F300A2B6FB /* LapseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LapseKit.h; sourceTree = "<group>"; };
-		3B0553E3178CD6F300A2B6FB /* LapseKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LapseKit.m; sourceTree = "<group>"; };
+		3B0553EC178CD82B00A2B6FB /* EVLHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVLHTTPClient.h; sourceTree = "<group>"; };
+		3B0553ED178CD82B00A2B6FB /* EVLHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVLHTTPClient.m; sourceTree = "<group>"; };
 		D19FD8CBC16C46C4B065DAEB /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -80,7 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				3B0553E1178CD6F300A2B6FB /* LapseKit.h */,
-				3B0553E3178CD6F300A2B6FB /* LapseKit.m */,
+				3B0553EC178CD82B00A2B6FB /* EVLHTTPClient.h */,
+				3B0553ED178CD82B00A2B6FB /* EVLHTTPClient.m */,
 				3B0553DF178CD6F300A2B6FB /* Supporting Files */,
 			);
 			path = LapseKit;
@@ -180,7 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B0553E4178CD6F300A2B6FB /* LapseKit.m in Sources */,
+				3B0553EE178CD82B00A2B6FB /* EVLHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,4 @@
 //  Copyright (c) 2013 Seesaw. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface LapseKit : NSObject
-
-@end
+#import "EVLHTTPClient.h"

@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/seesawco/LapseKit'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Caleb Davenport' => 'caleb@seesaw.co', 'Sam Soffes' => 'sam@seesaw.co' }
-  s.source       = { :git => 'git@github.com:seesawco/LapseKit.git', :tag => '0.1' }
+  s.source       = { :git => 'https://github.com/seesawco/LapseKit.git', :tag => '0.1' }
   
   s.platform     = :ios, '5.0'
   
