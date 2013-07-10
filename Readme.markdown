@@ -30,9 +30,9 @@ See the [documentation][Documentation] for more usage and examples.
 
 ## Installation
 
-Installing `LapseKit` with [CocoaPods][CocoaPods] is highly recommended. Simply add `pod 'LapseKit'` to your Podfile. Otherwise, you will need to install [AFNetworking][AFNetworking] and add EVLHTTPClient.{h,m} to your project.
+Installing `LapseKit` with [CocoaPods][CocoaPods] is highly recommended. Simply add `pod 'LapseKit'` to your Podfile. Otherwise, you will need to install [AFNetworking][AFNetworking] and add EVLHTTPClient.h and EVLHTTPClient.m to your project.
 
 [AFNetworking]: http://afnetworking.com
 [CocoaPods]: http://cocoapods.org
-[Documentation]: https://everlapse.com
+[Documentation]: https://developer.everlapse.com
 [Everlapse]: https://everlapse.com
