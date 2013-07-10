@@ -126,6 +126,29 @@ EVLHTTPClient *__sharedClient;
 }
 
 
+- (void)getRelationship:(EVLUserRelationshipType)relationship forUserWithID:(NSUInteger)userID success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure {
+    [self getRelationship:relationship forUserWithID:userID page:0 limit:0 success:success failure:failure];
+}
+
+
+- (void)getRelationship:(EVLUserRelationshipType)relationship forUserWithID:(NSUInteger)userID page:(NSUInteger)page success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure {
+    [self getRelationship:relationship forUserWithID:userID page:page limit:0 success:success failure:failure];
+}
+
+
+- (void)getRelationship:(EVLUserRelationshipType)relationship forUserWithID:(NSUInteger)userID page:(NSUInteger)page limit:(NSUInteger)limit success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure {
+    NSString *path = [NSString stringWithFormat:@"users/%@/%@", @(userID), (relationship == EVLUserRelationshipTypeFollower ? @"followers" : @"following")];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    if (page) {
+        parameters[@"page"] = @(page);
+    }
+    if (limit) {
+        parameters[@"limit"] = @(limit);
+    }
+    [self getPath:path parameters:parameters success:success failure:failure];
+}
+
+
 #pragma mark - Clips
 
 - (void)getClipWithID:(NSUInteger)clipID success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure {

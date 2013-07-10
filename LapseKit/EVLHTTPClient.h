@@ -8,6 +8,8 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+#import "EVLUserRelationshipType.h"
+
 typedef void (^EVLHTTPClientSuccess)(AFHTTPRequestOperation *operation, id responseObject);
 typedef void (^EVLHTTPClientFailure)(AFHTTPRequestOperation *operation, NSError *error);
 
@@ -45,6 +47,22 @@ typedef void (^EVLHTTPClientFailure)(AFHTTPRequestOperation *operation, NSError 
  */
 - (void)getUserWithID:(NSUInteger)userID success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
 
+/**
+ Get followers and following lists for the given user. This method supports
+ pagination across a user list using the `limit` and `page` parameters.
+ Additionally, the response headers will contain `X-Everlapse-Page-Count` which
+ you can use to determine how many pages of content there are.
+ @param userID The user ID who's friends you would like to list.
+ @param page The page you would like to fetch. Pass `0` here to start at the
+ most recent friend.
+ @param limit Scope the response to no more than this many users. Pass `0` here
+ to let the API decide how many users should be returned.
+ */
+- (void)getRelationship:(EVLUserRelationshipType)relationship forUserWithID:(NSUInteger)userID page:(NSUInteger)page limit:(NSUInteger)limit success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
+
+- (void)getRelationship:(EVLUserRelationshipType)relationship forUserWithID:(NSUInteger)userID success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
+- (void)getRelationship:(EVLUserRelationshipType)relationship forUserWithID:(NSUInteger)userID page:(NSUInteger)page success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
+
 #pragma mark - Clips
 
 /**
@@ -63,22 +81,6 @@ typedef void (^EVLHTTPClientFailure)(AFHTTPRequestOperation *operation, NSError 
 #pragma mark - Timelines
 
 /**
- Calls `getClipsInTimelineWithName:beforeClipWithID:limit:succes:failure:`
- passing `0` as the clip ID and limit.
- @param timelineName The name of the timeline to fetch.
- */
-- (void)getClipsInTimelineWithName:(NSString *)timelineName success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
-
-/**
- Calls `getClipsInTimelineWithName:beforeClipWithID:limit:succes:failure:`
- passing `0` as the clip ID.
- @param timelineName The name of the timeline to fetch.
- @param limit Scope the response to no more than this many clips. Pass `0` here
- to let the API decide how many clips should be returned.
- */
-- (void)getClipsInTimelineWithName:(NSString *)timelineName limit:(NSUInteger)limit success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
-
-/**
  Get clips in the given timeline. The method supports pagination across a
  timeline using the `limit` and `clipID` parameters.
  @param timelineName The name of the timeline to fetch.
@@ -88,5 +90,8 @@ typedef void (^EVLHTTPClientFailure)(AFHTTPRequestOperation *operation, NSError 
  to let the API decide how many clips should be returned.
  */
 - (void)getClipsInTimelineWithName:(NSString *)timelineName beforeClipWithID:(NSUInteger)clipID limit:(NSUInteger)limit success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
+
+- (void)getClipsInTimelineWithName:(NSString *)timelineName success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
+- (void)getClipsInTimelineWithName:(NSString *)timelineName limit:(NSUInteger)limit success:(EVLHTTPClientSuccess)success failure:(EVLHTTPClientFailure)failure;
 
 @end

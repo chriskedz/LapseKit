@@ -7,3 +7,4 @@
 //
 
 #import "EVLHTTPClient.h"
+#import "EVLUserRelationshipType.h"

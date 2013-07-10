@@ -34,6 +34,7 @@
 		3B0553E1178CD6F300A2B6FB /* LapseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LapseKit.h; sourceTree = "<group>"; };
 		3B0553EC178CD82B00A2B6FB /* EVLHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVLHTTPClient.h; sourceTree = "<group>"; };
 		3B0553ED178CD82B00A2B6FB /* EVLHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVLHTTPClient.m; sourceTree = "<group>"; };
+		3B6CD4D3178DE60C0077BA79 /* EVLUserRelationshipType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVLUserRelationshipType.h; sourceTree = "<group>"; };
 		D19FD8CBC16C46C4B065DAEB /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -84,6 +85,7 @@
 				3B0553E1178CD6F300A2B6FB /* LapseKit.h */,
 				3B0553EC178CD82B00A2B6FB /* EVLHTTPClient.h */,
 				3B0553ED178CD82B00A2B6FB /* EVLHTTPClient.m */,
+				3B6CD4D3178DE60C0077BA79 /* EVLUserRelationshipType.h */,
 			);
 			path = LapseKit;
 			sourceTree = "<group>";
