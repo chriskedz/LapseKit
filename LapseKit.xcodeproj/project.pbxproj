@@ -54,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				3B0553DE178CD6F300A2B6FB /* LapseKit */,
+				3B0553DF178CD6F300A2B6FB /* Supporting Files */,
 				3B0553DB178CD6F300A2B6FB /* Frameworks */,
 				3B0553DA178CD6F300A2B6FB /* Products */,
 				D19FD8CBC16C46C4B065DAEB /* Pods/Pods.xcconfig */,
@@ -83,7 +84,6 @@
 				3B0553E1178CD6F300A2B6FB /* LapseKit.h */,
 				3B0553EC178CD82B00A2B6FB /* EVLHTTPClient.h */,
 				3B0553ED178CD82B00A2B6FB /* EVLHTTPClient.m */,
-				3B0553DF178CD6F300A2B6FB /* Supporting Files */,
 			);
 			path = LapseKit;
 			sourceTree = "<group>";
@@ -94,6 +94,7 @@
 				3B0553E0178CD6F300A2B6FB /* LapseKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = LapseKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

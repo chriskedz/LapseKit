@@ -8,10 +8,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/seesawco/LapseKit.git', :tag => '0.1' }
   
   s.platform     = :ios, '5.0'
-  
   s.source_files = 'LapseKit/**/*.{h,m}'
-  
   s.requires_arc = true
-  
   s.dependency 'AFNetworking'
+  s.frameworks = 'SystemConfiguration', 'MobileCoreServices'
 end
